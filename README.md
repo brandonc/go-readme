@@ -6,11 +6,11 @@ A go HTTP client for interacting with the [readme.com](https://readme.com/) [API
 ### Example
 
 ```go
-client, err := NewClient(&Config{
+client, err := readme.NewClient(&Config{
   ApiKey: "12345",
 })
 
-response, err := client.ApiSpecifications.Upload(context.Background(), ApiSpecificationUploadOptions{
+response, err := client.ApiSpecifications.Upload(context.Background(), readme.ApiSpecificationUploadOptions{
   SpecPath: "./helloOpenAPI.json",
   Version: "1.0"
 })
